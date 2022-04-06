@@ -17,3 +17,7 @@ Did a lot. Tidy'd all data, created all plots, completed a prototype app. Basica
 ## March 28 End of Class
 
 Added means for default inputs. Worked on figuring out how to make it prettier (adjusting graph and sidebar size).
+
+## April 6 Before Class
+
+Working on finding a way to make the graphs smaller so they fit better and look prettier.

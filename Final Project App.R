@@ -114,55 +114,56 @@ library(shiny)
 ui <- fluidPage(
   titlePanel("Comparing Combine and College Performaces of 2021 Starting NFL Quarterbacks to a Prospect QB"),
   tabsetPanel(
-  tabPanel("Combine", fluid = TRUE,
-           sidebarLayout(
-             sidebarPanel(numericInput("ht", "Height (inches)", value = 75),
-                          numericInput("wt", "Weight (lbs)", value = 221),
-                          numericInput("40yd", "40 Yard Time", value = 4.79),
-                          numericInput("vert", "Vertical", value = 31.2),
-                          numericInput("broad", "Broad Jump (inches)", value = 113),
-                          numericInput("3cone", "3 Cone Drill Time", value = 7.05),
-                          numericInput("shuttle", "Shuttle Drill Time", value = 4.33)
-             , width = 1.5),
-             mainPanel(
-               plotOutput("ht"),
-               plotOutput("wt"),
-               plotOutput("40yd"),
-               plotOutput("vert"),
-               plotOutput("broad"),
-               plotOutput("3cone"),
-               plotOutput("shuttle")
+    tabPanel("Combine", fluid = TRUE,
+             sidebarLayout(
+               sidebarPanel(numericInput("ht", "Height (inches)", value = 75),
+                            numericInput("wt", "Weight (lbs)", value = 221),
+                            numericInput("40yd", "40 Yard Time (seconds)", value = 4.79),
+                            numericInput("vert", "Vertical (inches)", value = 31.2),
+                            numericInput("broad", "Broad Jump (inches)", value = 113),
+                            numericInput("3cone", "3 Cone Drill Time (seconds)", value = 7.05),
+                            numericInput("shuttle", "Shuttle Drill Time (seconds)", value = 4.33)
+                            , width = 2),
+               mainPanel(
+                 plotOutput("ht"),
+                 plotOutput("wt"),
+                 plotOutput("40yd"),
+                 plotOutput("vert"),
+                 plotOutput("broad"),
+                 plotOutput("3cone"),
+                 plotOutput("shuttle")
+               , width = 5)
              )
-           )
-  ),
-  tabPanel("College Career", fluid = TRUE,
-           sidebarLayout(
-             sidebarPanel(numericInput("g", "# of Games Played", 38),
-                          numericInput("comp", "# of Completions", 628),
-                          numericInput("att", "# of Attempts", 987),
-                          numericInput("compper", "Completion Percentage", 64.4),
-                          numericInput("pass", "# of Passing Yards", 8220),
-                          numericInput("yds", "Yards per Attempt", 8.6),
-                          numericInput("adj", "Adjusted Pass per Attempt", 9.1),
-                          numericInput("tds", "# of Touchdowns", 67),
-                          numericInput("int", "# of Interceptions", 22),
-                          numericInput("qbr", "Quarterback Rating", 155.9)
-                          ),
-             mainPanel(
-               plotOutput("g"),
-               plotOutput("comp"),
-               plotOutput("att"),
-               plotOutput("compper"),
-               plotOutput("pass"),
-               plotOutput("yds"),
-               plotOutput("adj"),
-               plotOutput("tds"),
-               plotOutput("int"),
-               plotOutput("qbr")
-           )
+    ),
+    
+    tabPanel("College Career", fluid = TRUE,
+             sidebarLayout(
+               sidebarPanel(numericInput("g", "# of Games Played", 38),
+                            numericInput("comp", "# of Completions", 628),
+                            numericInput("att", "# of Attempts", 987),
+                            numericInput("compper", "Completion Percentage", 64.4),
+                            numericInput("pass", "# of Passing Yards", 8220),
+                            numericInput("yds", "Yards per Attempt", 8.6),
+                            numericInput("adj", "Adjusted Pass per Attempt", 9.1),
+                            numericInput("tds", "# of Touchdowns", 67),
+                            numericInput("int", "# of Interceptions", 22),
+                            numericInput("qbr", "Quarterback Rating", 155.9)
+                            , width = 2),
+               mainPanel(
+                 plotOutput("g"),
+                 plotOutput("comp"),
+                 plotOutput("att"),
+                 plotOutput("compper"),
+                 plotOutput("pass"),
+                 plotOutput("yds"),
+                 plotOutput("adj"),
+                 plotOutput("tds"),
+                 plotOutput("int"),
+                 plotOutput("qbr")
+               )
+             )
+    )
   )
-)
-)
 )
 server <- function(input, output, session) {
   new_QB <- reactive({
@@ -379,7 +380,7 @@ server <- function(input, output, session) {
   )
   
   
+  
 }
 
 shinyApp(ui, server)
-
