@@ -21,3 +21,7 @@ Added means for default inputs. Worked on figuring out how to make it prettier (
 ## April 6 Before Class
 
 Working on finding a way to make the graphs smaller so they fit better and look prettier.
+
+## April 6 End of Class
+
+Worked with different layouts for the tabs, not sold on either yet.

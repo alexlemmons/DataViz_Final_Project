@@ -125,46 +125,59 @@ ui <- fluidPage(
                             numericInput("shuttle", "Shuttle Drill Time (seconds)", value = 4.33)
                             , width = 2),
                mainPanel(
-                 plotOutput("ht"),
-                 plotOutput("wt"),
-                 plotOutput("40yd"),
-                 plotOutput("vert"),
-                 plotOutput("broad"),
-                 plotOutput("3cone"),
-                 plotOutput("shuttle")
-               , width = 5)
+                 tabsetPanel(
+                   tabPanel("Height", plotOutput("ht")),
+                   tabPanel("Weight", plotOutput("wt")),
+                   tabPanel("40 Yard", plotOutput("40yd")),
+                   tabPanel("Vertical", plotOutput("vert")),
+                   tabPanel("Broad Jump", plotOutput("broad")),
+                   tabPanel("3 Cone Drill", plotOutput("3cone")),
+                   tabPanel("Shuttle Drill", plotOutput("shuttle"))
+               ))
              )
     ),
     
     tabPanel("College Career", fluid = TRUE,
-             sidebarLayout(
-               sidebarPanel(numericInput("g", "# of Games Played", 38),
-                            numericInput("comp", "# of Completions", 628),
-                            numericInput("att", "# of Attempts", 987),
-                            numericInput("compper", "Completion Percentage", 64.4),
-                            numericInput("pass", "# of Passing Yards", 8220),
-                            numericInput("yds", "Yards per Attempt", 8.6),
-                            numericInput("adj", "Adjusted Pass per Attempt", 9.1),
-                            numericInput("tds", "# of Touchdowns", 67),
-                            numericInput("int", "# of Interceptions", 22),
-                            numericInput("qbr", "Quarterback Rating", 155.9)
-                            , width = 2),
-               mainPanel(
-                 plotOutput("g"),
-                 plotOutput("comp"),
-                 plotOutput("att"),
-                 plotOutput("compper"),
-                 plotOutput("pass"),
-                 plotOutput("yds"),
-                 plotOutput("adj"),
-                 plotOutput("tds"),
-                 plotOutput("int"),
-                 plotOutput("qbr")
+             fluidRow(
+               column(1, numericInput("g", "# of Games Played", 38),
+                      numericInput("comp", "# of Completions", 628)),
+               column(1, offset = 1,
+                      numericInput("att", "# of Attempts", 987),
+                      numericInput("compper", "Completion Percentage", 64.4)),
+               column(1, offset = 1,
+                      numericInput("pass", "# of Passing Yards", 8220),
+                      numericInput("yds", "Yards per Attempt", 8.6)),
+               
+               column(1, offset = 1,
+                      numericInput("tds", "# of Touchdowns", 67),
+                      numericInput("int", "# of Interceptions", 22)),
+               column(1, offset = 1,
+                      numericInput("qbr", "Quarterback Rating", 155.9),
+                      numericInput("adj", "Adjusted Pass per Attempt", 9.1)
+               )),
+             
+             hr(),
+             
+             fluidRow(column(12, tabsetPanel(
+               tabPanel("Height", plotOutput("g")),
+               tabPanel("Height", plotOutput("comp")),
+               tabPanel("Height", plotOutput("att")),
+               tabPanel("Height", plotOutput("compper")),
+               tabPanel("Height", plotOutput("pass")),
+               tabPanel("Height", plotOutput("yds")),
+               tabPanel("Height", plotOutput("tds")),
+               tabPanel("Height", plotOutput("int")),
+               tabPanel("Height", plotOutput("qbr")),
+               tabPanel("Height", plotOutput("adj"))))),
+             
+             
+             
                )
              )
     )
-  )
-)
+
+
+  
 server <- function(input, output, session) {
   new_QB <- reactive({
     tibble(Player = c("Your QB"),
