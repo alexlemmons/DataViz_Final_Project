@@ -25,3 +25,7 @@ Working on finding a way to make the graphs smaller so they fit better and look 
 ## April 6 End of Class
 
 Worked with different layouts for the tabs, not sold on either yet.
+
+## April 18 Before Class
+
+Still trying to manipulate the dimensions of the app to be more visually appealing yet still as usefull.
