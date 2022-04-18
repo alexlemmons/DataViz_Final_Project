@@ -115,66 +115,64 @@ ui <- fluidPage(
   titlePanel("Comparing Combine and College Performaces of 2021 Starting NFL Quarterbacks to a Prospect QB"),
   tabsetPanel(
     tabPanel("Combine", fluid = TRUE,
-             sidebarLayout(
-               sidebarPanel(numericInput("ht", "Height (inches)", value = 75),
-                            numericInput("wt", "Weight (lbs)", value = 221),
-                            numericInput("40yd", "40 Yard Time (seconds)", value = 4.79),
-                            numericInput("vert", "Vertical (inches)", value = 31.2),
-                            numericInput("broad", "Broad Jump (inches)", value = 113),
-                            numericInput("3cone", "3 Cone Drill Time (seconds)", value = 7.05),
-                            numericInput("shuttle", "Shuttle Drill Time (seconds)", value = 4.33)
-                            , width = 2),
-               mainPanel(
-                 tabsetPanel(
-                   tabPanel("Height", plotOutput("ht")),
-                   tabPanel("Weight", plotOutput("wt")),
-                   tabPanel("40 Yard", plotOutput("40yd")),
-                   tabPanel("Vertical", plotOutput("vert")),
-                   tabPanel("Broad Jump", plotOutput("broad")),
-                   tabPanel("3 Cone Drill", plotOutput("3cone")),
-                   tabPanel("Shuttle Drill", plotOutput("shuttle"))
-               ))
-             )
-    ),
+             fluidRow(
+               column(2, numericInput("ht", "Height (inches)", value = 75),
+                      numericInput("wt", "Weight (lbs)", value = 221)),
+               column(2, offset = 0.5,
+                      numericInput("40yd", "40 Yard Time (seconds)", value = 4.79),
+                      numericInput("vert", "Vertical (inches)", value = 31.2)),
+               column(2, offset = 0.5,
+                      numericInput("broad", "Broad Jump (inches)", value = 113),
+                      numericInput("3cone", "3 Cone Drill Time (seconds)", value = 7.05)),
+               
+               column(2, offset = 0.5,
+                      numericInput("shuttle", "Shuttle Drill Time (seconds)", value = 4.33))
+               ),
+             
+             
+             fluidRow(column(12, tabsetPanel(
+               tabPanel("Height", plotOutput("ht")),
+               tabPanel("Weight", plotOutput("wt")),
+               tabPanel("40 Yard", plotOutput("40yd")),
+               tabPanel("Vertical", plotOutput("vert")),
+               tabPanel("Broad Jump", plotOutput("broad")),
+               tabPanel("3 Cone Drill", plotOutput("3cone")),
+               tabPanel("Shuttle Drill", plotOutput("shuttle")))))),
+            
+    
     
     tabPanel("College Career", fluid = TRUE,
              fluidRow(
-               column(1, numericInput("g", "# of Games Played", 38),
+               column(2, numericInput("g", "# of Games Played", 38),
                       numericInput("comp", "# of Completions", 628)),
-               column(1, offset = 1,
+               column(2, offset = 0.5,
                       numericInput("att", "# of Attempts", 987),
                       numericInput("compper", "Completion Percentage", 64.4)),
-               column(1, offset = 1,
+               column(2, offset = 0.5,
                       numericInput("pass", "# of Passing Yards", 8220),
                       numericInput("yds", "Yards per Attempt", 8.6)),
                
-               column(1, offset = 1,
+               column(2, offset = 0.5,
                       numericInput("tds", "# of Touchdowns", 67),
                       numericInput("int", "# of Interceptions", 22)),
-               column(1, offset = 1,
+               column(2, offset = 0.5,
                       numericInput("qbr", "Quarterback Rating", 155.9),
                       numericInput("adj", "Adjusted Pass per Attempt", 9.1)
                )),
              
-             hr(),
-             
+        
              fluidRow(column(12, tabsetPanel(
-               tabPanel("Height", plotOutput("g")),
-               tabPanel("Height", plotOutput("comp")),
-               tabPanel("Height", plotOutput("att")),
-               tabPanel("Height", plotOutput("compper")),
-               tabPanel("Height", plotOutput("pass")),
-               tabPanel("Height", plotOutput("yds")),
-               tabPanel("Height", plotOutput("tds")),
-               tabPanel("Height", plotOutput("int")),
-               tabPanel("Height", plotOutput("qbr")),
-               tabPanel("Height", plotOutput("adj"))))),
-             
-             
-             
-               )
-             )
-    )
+               tabPanel("Games", plotOutput("g")),
+               tabPanel("Completions", plotOutput("comp")),
+               tabPanel("Attempts", plotOutput("att")),
+               tabPanel("Completion %", plotOutput("compper")),
+               tabPanel("Passing Yards", plotOutput("pass")),
+               tabPanel("Yards per Attempt", plotOutput("yds")),
+               tabPanel("Tounchdowns", plotOutput("tds")),
+               tabPanel("Interceptions", plotOutput("int")),
+               tabPanel("QBR", plotOutput("qbr")),
+               tabPanel("Adj Yards per Attempt", plotOutput("adj")))))
+    )))
 
 
   

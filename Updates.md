@@ -28,4 +28,8 @@ Worked with different layouts for the tabs, not sold on either yet.
 
 ## April 18 Before Class
 
-Still trying to manipulate the dimensions of the app to be more visually appealing yet still as usefull.
+Still trying to manipulate the dimensions of the app to be more visually appealing yet still as useful.
+
+## April 18 After Class
+
+Successfully discovered my preferred visual scheme for my app.
