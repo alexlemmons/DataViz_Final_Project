@@ -38,3 +38,7 @@ Successfully discovered my preferred visual scheme for my app.
 
 Researched and worked on turning my graphs into interactive plotly graphs.
 
+## April 20 After Class
+
+Fumbled around with the plotly. Currently trying to figure out how to change the label variable names.
+

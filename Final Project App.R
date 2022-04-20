@@ -100,7 +100,7 @@ ggplot(full_join(QB_data, QB_new), aes(fct_reorder(Player, cfb_AdjPassPerAtt), c
   geom_point(data = QB_new, color = "red") +
   geom_segment(data = QB_new, aes(x = Player, xend = Player, y = 0, yend = cfb_AdjPassPerAtt), color = "red")
 
-ggplot(full_join(QB_data, QB_new), aes(fct_reorder(Player, cfb_AdjPassPerAtt), cfb_AdjPassPerAtt)) +
+ggplotly(ggplot(full_join(QB_data, QB_new), aes(fct_reorder(Player, cfb_AdjPassPerAtt), cfb_AdjPassPerAtt)) +
   geom_point() +
   geom_segment(aes(x = Player, xend = Player, y = 0, yend = cfb_AdjPassPerAtt)) +
   coord_flip() +
@@ -108,8 +108,11 @@ ggplot(full_join(QB_data, QB_new), aes(fct_reorder(Player, cfb_AdjPassPerAtt), c
   ylab(NULL) +
   geom_point(data = QB_new, color = "red") +
   geom_segment(data = QB_new, aes(x = Player, xend = Player, y = 0, yend = cfb_AdjPassPerAtt), color = "red")
+)
 
 library(plotly)
+
+
 
 library(shiny) 
 
@@ -201,7 +204,7 @@ server <- function(input, output, session) {
   })
   
   output$ht <- renderPlot(
-    ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, height_in_inches), height_in_inches)) +
+    ggplotly(ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, height_in_inches), height_in_inches)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = height_in_inches)) +
       coord_flip() +
@@ -209,7 +212,7 @@ server <- function(input, output, session) {
       xlab(NULL) +
       geom_point(data = new_QB(), color = "red") +
       geom_segment(data = new_QB(), aes(x = Player, xend = Player, y = 0, yend = height_in_inches), color = "red")
-  )
+  ))
   
   output$wt <- renderPlot(
     ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, Wt), Wt)) +
