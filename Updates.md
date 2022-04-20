@@ -33,3 +33,8 @@ Still trying to manipulate the dimensions of the app to be more visually appeali
 ## April 18 After Class
 
 Successfully discovered my preferred visual scheme for my app.
+
+## April 20 Before Class
+
+Researched and worked on turning my graphs into interactive plotly graphs.
+

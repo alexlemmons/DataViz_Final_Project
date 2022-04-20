@@ -109,6 +109,8 @@ ggplot(full_join(QB_data, QB_new), aes(fct_reorder(Player, cfb_AdjPassPerAtt), c
   geom_point(data = QB_new, color = "red") +
   geom_segment(data = QB_new, aes(x = Player, xend = Player, y = 0, yend = cfb_AdjPassPerAtt), color = "red")
 
+library(plotly)
+
 library(shiny) 
 
 ui <- fluidPage(
