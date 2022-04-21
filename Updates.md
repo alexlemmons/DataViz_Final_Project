@@ -42,3 +42,4 @@ Researched and worked on turning my graphs into interactive plotly graphs.
 
 Fumbled around with the plotly. Currently trying to figure out how to change the label variable names.
 
+Hey Alex, neither of your before class commits this week show any evidence of anything that you worked on (no code was changed at all in any of your files).
