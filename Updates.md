@@ -42,7 +42,11 @@ Researched and worked on turning my graphs into interactive plotly graphs.
 
 Fumbled around with the plotly. Currently trying to figure out how to change the label variable names.
 
+<<<<<<< HEAD
 ## April 25 Before Class
 
-Semi-successfully implemented plotly. Now working on a way to change the variable names in the plotly so they're not "full_join...".
+Semi-successfully implemented plotly. Been researching and working on a way to change the variable names in the plotly so they're not "full_join..." with no luck.
 
+=======
+Hey Alex, neither of your before class commits this week show any evidence of anything that you worked on (no code was changed at all in any of your files).
+>>>>>>> 2d37e8f3bdf5e9b6b69fe3da1ada6e95559c7923
