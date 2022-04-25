@@ -17,3 +17,7 @@ Volpe - Working with Tennis data, current issue with joining datasets because of
 ## April 20
 
 Grace- Working on a blog about water contaminant concentration in California. Trying to figure out the maps and the actual blog part. Current map looks quite abstract.
+
+## April 25
+
+Alyssa - Working with MLB salary data. Compares salary against position density and team. Has this really cool way to change themes in the app. Looking to add something else but doesn't exactly know what yet.

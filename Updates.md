@@ -50,3 +50,9 @@ Semi-successfully implemented plotly. Been researching and working on a way to c
 =======
 Hey Alex, neither of your before class commits this week show any evidence of anything that you worked on (no code was changed at all in any of your files).
 >>>>>>> 2d37e8f3bdf5e9b6b69fe3da1ada6e95559c7923
+
+## April 25 After Class
+
+Semi-success is now mostly failure as the plotly graph isn't working for some unholy reason I cannot figure out. I've researched and have seemingly done everything necessary. I do not get an error or anything it is just blank in the app. I shall rest and pray a fortnight, then I will return to this problem well rested with a new outlook. 
+
+Also sorry about the previous commits, I was making up a lot of work last week and didn't have a lot of time.
