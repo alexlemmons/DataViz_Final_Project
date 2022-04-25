@@ -215,7 +215,7 @@ server <- function(input, output, session) {
   ))
   
   output$wt <- renderPlot(
-    ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, Wt), Wt)) +
+    ggplotly(ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, Wt), Wt)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = Wt)) +
       coord_flip() +
@@ -223,10 +223,10 @@ server <- function(input, output, session) {
       xlab(NULL) +
       geom_point(data = new_QB(), color = "red") +
       geom_segment(data = new_QB(), aes(x = Player, xend = Player, y = 0, yend = Wt), color = "red")
-  )
+  ))
   
   output$`40yd` <- renderPlot(
-    ggplot((full_join(QB_data, new_QB()) %>% drop_na(`40yd`)), aes(fct_reorder(Player, `40yd`), `40yd`)) +
+    ggplotly(ggplot((full_join(QB_data, new_QB()) %>% drop_na(`40yd`)), aes(fct_reorder(Player, `40yd`), `40yd`)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = `40yd`)) +
       coord_flip() +
@@ -235,10 +235,10 @@ server <- function(input, output, session) {
       scale_x_discrete(limits = rev) +
       geom_point(data = new_QB(), color = "red") +
       geom_segment(data = new_QB(), aes(x = Player, xend = Player, y = 0, yend = `40yd`), color = "red")
-  )
+  ))
   
   output$vert <- renderPlot(
-    ggplot((full_join(QB_data, new_QB()) %>% drop_na(Vertical)), aes(fct_reorder(Player, Vertical), Vertical)) +
+    ggplotly(ggplot((full_join(QB_data, new_QB()) %>% drop_na(Vertical)), aes(fct_reorder(Player, Vertical), Vertical)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = Vertical)) +
       coord_flip() +
@@ -246,10 +246,10 @@ server <- function(input, output, session) {
       xlab(NULL) +
       geom_point(data = new_QB(), color = "red") +
       geom_segment(data = new_QB(), aes(x = Player, xend = Player, y = 0, yend = Vertical), color = "red")
-  )
+  ))
   
   output$broad <- renderPlot(
-    ggplot((full_join(QB_data, new_QB()) %>% drop_na(`Broad Jump`)), aes(fct_reorder(Player, `Broad Jump`), `Broad Jump`)) +
+    ggplotly(ggplot((full_join(QB_data, new_QB()) %>% drop_na(`Broad Jump`)), aes(fct_reorder(Player, `Broad Jump`), `Broad Jump`)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = `Broad Jump`)) +
       coord_flip() +
@@ -257,10 +257,10 @@ server <- function(input, output, session) {
       xlab(NULL) +
       geom_point(data = new_QB(), color = "red") +
       geom_segment(data = new_QB(), aes(x = Player, xend = Player, y = 0, yend = `Broad Jump`), color = "red")
-  )
+  ))
   
   output$`3cone` <- renderPlot(
-    ggplot((full_join(QB_data, new_QB()) %>% drop_na(`3Cone`)), aes(fct_reorder(Player, `3Cone`), `3Cone`)) +
+    ggplotly(ggplot((full_join(QB_data, new_QB()) %>% drop_na(`3Cone`)), aes(fct_reorder(Player, `3Cone`), `3Cone`)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = `3Cone`)) +
       coord_flip() +
@@ -269,10 +269,10 @@ server <- function(input, output, session) {
       scale_x_discrete(limits = rev) +
       geom_point(data = new_QB(), color = "red") +
       geom_segment(data = new_QB(), aes(x = Player, xend = Player, y = 0, yend = `3Cone`), color = "red")
-  )
+  ))
   
   output$shuttle <- renderPlot(
-    ggplot((full_join(QB_data, new_QB()) %>% drop_na(Shuttle)), aes(fct_reorder(Player, Shuttle), Shuttle)) +
+    ggplotly(ggplot((full_join(QB_data, new_QB()) %>% drop_na(Shuttle)), aes(fct_reorder(Player, Shuttle), Shuttle)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = Shuttle)) +
       coord_flip() +
@@ -281,10 +281,10 @@ server <- function(input, output, session) {
       scale_x_discrete(limits = rev) +
       geom_point(data = new_QB(), color = "red") +
       geom_segment(data = new_QB(), aes(x = Player, xend = Player, y = 0, yend = Shuttle), color = "red")
-  )
+  ))
   
   output$g <- renderPlot(
-    ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_G), cfb_G)) +
+    ggplotly(ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_G), cfb_G)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = cfb_G)) +
       coord_flip() +
@@ -292,10 +292,10 @@ server <- function(input, output, session) {
       xlab(NULL) +
       geom_point(data = new_QB(), color = "red") +
       geom_segment(data = new_QB(), aes(x = Player, xend = Player, y = 0, yend = cfb_G), color = "red")
-  )
+  ))
   
   output$comp <- renderPlot(
-    ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_Completions), cfb_Completions)) +
+    ggplotly(ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_Completions), cfb_Completions)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = cfb_Completions)) +
       coord_flip() +
@@ -303,10 +303,10 @@ server <- function(input, output, session) {
       xlab(NULL) +
       geom_point(data = new_QB(), color = "red") +
       geom_segment(data = new_QB(), aes(x = Player, xend = Player, y = 0, yend = cfb_Completions), color = "red")
-  )
+  ))
   
   output$att <- renderPlot(
-    ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_Attempts), cfb_Attempts)) +
+    ggplotly(ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_Attempts), cfb_Attempts)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = cfb_Attempts)) +
       coord_flip() +
@@ -314,10 +314,10 @@ server <- function(input, output, session) {
       xlab(NULL) +
       geom_point(data = new_QB(), color = "red") +
       geom_segment(data = new_QB(), aes(x = Player, xend = Player, y = 0, yend = cfb_Attempts), color = "red")
-  )
+  ))
   
   output$compper <- renderPlot(
-    ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_CompPct), cfb_CompPct)) +
+    ggplotly(ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_CompPct), cfb_CompPct)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = cfb_CompPct)) +
       coord_flip() +
@@ -325,11 +325,11 @@ server <- function(input, output, session) {
       xlab(NULL) +
       geom_point(data = new_QB(), color = "red") +
       geom_segment(data = new_QB(), aes(x = Player, xend = Player, y = 0, yend = cfb_CompPct), color = "red")
-  )
+  ))
   
   
   output$pass <- renderPlot(
-    ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_PassingYds), cfb_PassingYds)) +
+    ggplotly(ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_PassingYds), cfb_PassingYds)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = cfb_PassingYds)) +
       coord_flip() +
@@ -337,10 +337,10 @@ server <- function(input, output, session) {
       xlab(NULL) +
       geom_point(data = new_QB(), color = "red") +
       geom_segment(data = new_QB(), aes(x = Player, xend = Player, y = 0, yend = cfb_PassingYds), color = "red")
-  )
+  ))
   
   output$yds <- renderPlot(
-    ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_YdsPerAtt), cfb_YdsPerAtt)) +
+    ggplotly(ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_YdsPerAtt), cfb_YdsPerAtt)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = cfb_YdsPerAtt)) +
       coord_flip() +
@@ -348,10 +348,10 @@ server <- function(input, output, session) {
       xlab(NULL) +
       geom_point(data = new_QB(), color = "red") +
       geom_segment(data = new_QB(), aes(x = Player, xend = Player, y = 0, yend = cfb_YdsPerAtt), color = "red")
-  )
+  ))
   
   output$adj <- renderPlot(
-    ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_AdjPassPerAtt), cfb_AdjPassPerAtt)) +
+    ggplotly(ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_AdjPassPerAtt), cfb_AdjPassPerAtt)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = cfb_AdjPassPerAtt)) +
       coord_flip() +
@@ -359,10 +359,10 @@ server <- function(input, output, session) {
       xlab(NULL) +
       geom_point(data = new_QB(), color = "red") +
       geom_segment(data = new_QB(), aes(x = Player, xend = Player, y = 0, yend = cfb_AdjPassPerAtt), color = "red")
-  )
+  ))
   
   output$tds <- renderPlot(
-    ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_Tds), cfb_Tds)) +
+    ggplotly(ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_Tds), cfb_Tds)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = cfb_Tds)) +
       coord_flip() +
@@ -370,10 +370,10 @@ server <- function(input, output, session) {
       xlab(NULL) +
       geom_point(data = new_QB(), color = "red") +
       geom_segment(data = new_QB(), aes(x = Player, xend = Player, y = 0, yend = cfb_Tds), color = "red")
-  )
+  ))
   
   output$int <- renderPlot(
-    ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_Int), cfb_Int)) +
+    ggplotly(ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_Int), cfb_Int)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = cfb_Int)) +
       coord_flip() +
@@ -382,10 +382,10 @@ server <- function(input, output, session) {
       scale_x_discrete(limits = rev) +
       geom_point(data = new_QB(), color = "red") +
       geom_segment(data = new_QB(), aes(x = Player, xend = Player, y = 0, yend = cfb_Int), color = "red")
-  )
+  ))
   
   output$qbr <- renderPlot(
-    ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_rating), cfb_rating)) +
+    ggplotly(ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, cfb_rating), cfb_rating)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = cfb_rating)) +
       coord_flip() +
@@ -393,7 +393,7 @@ server <- function(input, output, session) {
       xlab(NULL) +
       geom_point(data = new_QB(), color = "red") +
       geom_segment(data = new_QB(), aes(x = Player, xend = Player, y = 0, yend = cfb_rating), color = "red")
-  )
+  ))
   
   
   

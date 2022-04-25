@@ -42,3 +42,7 @@ Researched and worked on turning my graphs into interactive plotly graphs.
 
 Fumbled around with the plotly. Currently trying to figure out how to change the label variable names.
 
+## April 25 Before Class
+
+Semi-successfully implemented plotly. Now working on a way to change the variable names in the plotly so they're not "full_join...".
+
