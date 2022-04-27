@@ -56,3 +56,7 @@ Hey Alex, neither of your before class commits this week show any evidence of an
 Semi-success is now mostly failure as the plotly graph isn't working for some unholy reason I cannot figure out. I've researched and have seemingly done everything necessary. I do not get an error or anything it is just blank in the app. I shall rest and pray a fortnight, then I will return to this problem well rested with a new outlook. 
 
 Also sorry about the previous commits, I was making up a lot of work last week and didn't have a lot of time.
+
+## April 27 Before Class
+
+Still having trouble with the plotly. Research has largely gone nowhere. I appear to be doing everything right and my test plot works. Will look more into this today.

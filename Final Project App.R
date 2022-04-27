@@ -205,7 +205,7 @@ server <- function(input, output, session) {
   
   
   output$ht <- renderPlotly(
-  plot_ly(ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, height_in_inches), height_in_inches)) +
+  ggplotly(ggplot(full_join(QB_data, new_QB()), aes(fct_reorder(Player, height_in_inches), height_in_inches)) +
       geom_point() +
       geom_segment(aes(x = Player, xend = Player, y = 0, yend = height_in_inches)) +
       coord_flip() +
