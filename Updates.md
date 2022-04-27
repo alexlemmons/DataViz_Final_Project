@@ -60,3 +60,7 @@ Also sorry about the previous commits, I was making up a lot of work last week a
 ## April 27 Before Class
 
 Still having trouble with the plotly. Research has largely gone nowhere. I appear to be doing everything right and my test plot works. Will look more into this today.
+
+## April 27 After Class
+
+Still haven't figured out the plotly. Looking for help.

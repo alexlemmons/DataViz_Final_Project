@@ -21,3 +21,7 @@ Grace- Working on a blog about water contaminant concentration in California. Tr
 ## April 25
 
 Alyssa - Working with MLB salary data. Compares salary against position density and team. Has this really cool way to change themes in the app. Looking to add something else but doesn't exactly know what yet.
+
+## April 27
+
+Grace- Working on water contamination data in California. Currently trying to figure out the map because the lat and long are not being recognized.
