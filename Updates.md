@@ -64,3 +64,7 @@ Still having trouble with the plotly. Research has largely gone nowhere. I appea
 ## April 27 After Class
 
 Still haven't figured out the plotly. Looking for help.
+
+## May 2 Before Class
+
+Never figured out the plotly. I have converted all graphs back to static graphs.
