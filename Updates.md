@@ -68,3 +68,7 @@ Still haven't figured out the plotly. Looking for help.
 ## May 2 Before Class
 
 Never figured out the plotly. I have converted all graphs back to static graphs.
+
+## May 2 After Class
+
+Working on trying to add another comparison plot to compare multiple variable against each other.
