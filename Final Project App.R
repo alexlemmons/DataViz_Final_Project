@@ -5,10 +5,6 @@ library(stringr)
 
 
 
-library(readr)
-df <- read_csv("../data/qb_combine.csv")
-
-
 target <- c("Kyler Murray", "Matt Ryan", "Lamar Jackson", "Josh Allen", "Sam Darnold", 
             "Andy Dalton", "Joe Burrow", "Baker Mayfield", "Dak Prescott", 
             "Drew Lock", "Jared Goff", "Aaron Rodgers", "Davis Mills", 
@@ -110,11 +106,6 @@ ggplot(full_join(QB_data, QB_new), aes(fct_reorder(Player, cfb_AdjPassPerAtt), c
   geom_segment(data = QB_new, aes(x = Player, xend = Player, y = 0, yend = cfb_AdjPassPerAtt), color = "red")
 
 
-
-library(plotly)
-
-
-
 library(shiny) 
 
 ui <- fluidPage(
@@ -177,10 +168,10 @@ ui <- fluidPage(
                tabPanel("Tounchdowns", plotOutput("tds")),
                tabPanel("Interceptions", plotOutput("int")),
                tabPanel("QBR", plotOutput("qbr")),
-               tabPanel("Adj Yards per Attempt", plotOutput("adj"))))),
-             
-             fluidRow("Compare", plotOutput("plot"))
-    )))
+               tabPanel("Adj Yards per Attempt", plotOutput("adj")))))
+    )),
+  
+  fluidRow("Data scraped from profootballreference.com by Dr. Michael Schuckers"))
 
 
   

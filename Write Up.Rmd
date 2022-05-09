@@ -1,0 +1,20 @@
+---
+title: "Final Project Write Up"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+The purpose of my shiny application is to serve as a simple tool to help tell how a prospective college quarterback compares to the caliber of an NFL starting quarterback. My shiny app uses two data frames scraped from profootballreference.com by Dr. Michael Schuckers featuring both NFL Combine data and college career statistics of all college quarterbacks between 2000-2021. I have filtered this data down to only 2021 starting NFL quarterbacks and have made it so that you can compare the combine and college performances of these NFL quarterbacks to any perspective quarterback through the input of each specific variable.
+
+My visualizations follow the tenets of “good” data visualization as discussed in class in multiple ways. Firstly, I have designed my app so that the graph can take up as much space as possible so that it is as easy as possible to read the x-axis and differentiate better the differences between each quarterback. 
+
+Second, I have chosen to go with a lollipop chart instead of a bar graph or a scatterplot. This was done because I believe that the lollipop chart keeps the good things about the bar and scatter plots, while in turn fixing the bad things about both. To my eyes, the dot makes it easier to see where the bar ends, and the bar helps give context by making the differences between cases more apparent and easier to see. 
+
+Thirdly, I have made the “Your QB” case in the visualization red to make it easier to see. This is important because you’ll want to know the position of “Your QB” more than any other case and helps to make the results of the visualization easier to see and more apparent.
+
+Lastly, I have made sure to give proper credit to both profootballreference.com, where the data came from, and Dr. Schuckers, who originally scraped the data at the bottom of my visualization. This is important ethically because it is important for the user of the app to know where the data comes from and for Dr. Schuckers and profootballreference.com to get proper credit for their contributions.
+
+Future work could be done with this data set. A similar app like this could be made for each position. It could be very useful for positions like wide recievers and defensive backs. The only limitation i could think of is just how simple the app is which can hurt its overall usuability as something to actually make decisions off of.
+
+
