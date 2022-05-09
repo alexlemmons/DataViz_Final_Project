@@ -3,7 +3,7 @@ library(tidyverse)
 library(dplyr)
 library(stringr)
 
-
+df <- read_csv("data/qb_combine.csv")
 
 target <- c("Kyler Murray", "Matt Ryan", "Lamar Jackson", "Josh Allen", "Sam Darnold", 
             "Andy Dalton", "Joe Burrow", "Baker Mayfield", "Dak Prescott", 
